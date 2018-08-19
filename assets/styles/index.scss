@@ -1,13 +1,13 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
-@import url('https://fonts.googleapis.com/css?family=Monoton');
-// body {
-//     text-align: center;
-//     font-family: 'Monoton', cursive;
-//     background-color: tan;
-//     color: #A04000;
-//     text-shadow: 2px 2px 4px #111;
-// }
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+body {
+    text-align: center;
+    font-family: 'Raleway', cursive;
+    background-color: #42f4e2;
+    color: #A04000;
+    text-shadow: 2px 2px 4px #111;
+}
 //
 // a {
 //     color: #bbb;
