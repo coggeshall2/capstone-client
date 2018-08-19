@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Serenity Trail Logger</title>
+      <title>Remember Me</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -15,20 +15,21 @@
     <body>
        <!-- HEADER -->
        <header >
+         <div id="wrapper-register">
          <div>
-           <h1>Serenity Trails Logger</h1>
-           <h4>First time players, please sign up and then sign in</h4>
+           <h1>Remember Me</h1>
+           <h4>First time users, please register and then sign in</h4>
            <div id="messages"></div>
          </div>
          <div id="signUp">
            <form id="sign-up">
              <fieldset>
-               <h2>Sign Up!</h2>
+               <h2>Register!</h2>
                <div id='sign-up-message'></div>
                <input type="email" name="credentials[email]" placeholder="Email"><br>
                <input type="password" name="credentials[password]" placeholder="Password"><br>
                <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
-               <input type="submit" value="Sign Up!">
+               <input type="submit" value="Register!">
              </fieldset>
             </form>
           </div>
@@ -43,32 +44,166 @@
             </fieldset>
            </form>
            </div>
-           <div></div>
+         </div>
+         <br><br>
+           <!-- <div></div>
            <div></div>
            <div class='userButtons'>
              <div class='buttons'>
-             <!-- <button type="button" class="button" id="trailInfo"><a href="#trail-info"></a>Trails Info</button>
+             <!- <button type="button" class="button" id="trailInfo"><a href="#trail-info"></a>Trails Info</button>
              <button type="button" class="button" id="seeInfo"><a href=".userInfo"></a>See User Info</button> -->
-             <button class = 'button' id='trailInfo'>Trails Info</button>
+             <!-- <button class = 'button' id=<"basicInfo">Basic Info</button>
              <button class = 'button' id='seeInfo'>See User Info</button>
              </div>
-           </div>
+           </div>  -->
 <!-- Hidden Divs -->
-           <div id="trail-info">
-             <form id="trails-create" class="border">
+<div id="wrapper-birth">
+  <div id="birth-info">
+    <form id="birthday" class="border">
+      <fieldset>
+
+        <h2>You've been blessed with a child</h2>
+      <div>
+        <h3>Babies given name</h3>
+        <input type="text" name="family[given_name]" placeholder="Enter given name"><br>
+      </div>
+      <div>
+        <h3>Babies family name</h3>
+        <input type="text" name="family[family_name]" placeholder="Enter family name"><br>
+      </div>
+      <div>
+        <h3>Babies birth date</h3>
+        <input type="date" name="family[birth_date]" placeholder="Enter birth date"><br>
+      </div>
+      <div>
+        <h3>Babies birth weight</h3>
+        <input type="number" name="family[birth_weight]" placeholder="Enter birth weight in lbs./oz."><br>
+      </div>
+      <div>
+        <h3>Babies birth length</h3>
+        <input type="number" name="family[birth_length]" placeholder="Enter birth length in inches"><br>
+      </div>
+      <div>
+        <h3>Babies place of birth</h3>
+        <input type="text" name="family[hospital_name]" placeholder="Enter hospital name"><br>
+      </div>
+      <div>
+        <h3>Babies delivery doctor</h3>
+        <input type="text" name="family[doctor_name]" placeholder="Enter doctor's name"><br>
+      </div>
+      <div>
+        <h3>Precious memories of the birth</h3>
+        <textarea name="family[memory]" form="birthday">Enter other memorable info here...</textarea>
+      </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<div id="wrapper-firsts">
+  <form id="baby-firsts">
+    <fieldset>
+      <h2>Baby Firsts</h2>
+      <div>
+        <h3>First time baby smiles</h3>
+        <textarea name="first[smile]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby giggles</h3>
+        <textarea name="first[laugh]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby rolls over</h3>
+        <textarea name="first[roll_over]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby sits up</h3>
+        <textarea name="first[sitting_up]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First baby tooth</h3>
+        <textarea name="first[tooth]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby kisses</h3>
+        <textarea name="first[kisses]" form="baby-firsts">Enter babies first...</textarea></br>
+      </div>
+      <div>
+        <h3>First time baby crawls</h3>
+        <textarea name="first[crawling]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First foods</h3>
+        <textarea name="first[foods]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby stands</h3>
+        <textarea name="first[standing]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby waves bye-bye</h3>
+        <textarea name="first[waving]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First baby steps</h3>
+        <textarea name="first[walking]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First words</h3>
+        <textarea name="first[words]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First time baby says mama and dada</h3>
+        <textarea name="first[mama_dada]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First haircut</h3>
+        <textarea name="first[haircut]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First birthday</h3>
+        <textarea name="first[birthday]" form="baby-firsts">Enter babies first...</textarea><br>
+      </div>
+      <div>
+        <h3>First other</h3>
+        <textarea name="first[other]" form="baby-firsts">Enter babies first...</textarea>
+    </fieldset>
+  </form>
+</div>
+<div id="wrapper-favorites">
+  <form id="favorites">
+    <fieldset>
+      <h2>Babies Favorites</h2>
+    <div>
+      <h3>Favorite foods</h3>
+      <textarea name="favorites[foods]" form="favorites">Enter babies favorite...</textarea><br>
+    </div>
+    <div>
+      <h3>Favorite songs/lullabyes</h3>
+      <textarea name="favorites[songs]" form="favorites">Enter babies favorite...</textarea><br>
+    </div>
+    <div>
+      <h3>Favorite toys</h3>
+      <textarea name="favorites[toys]" form="favorites">Enter babies favorite...</textarea>
+    </div>
+    </fieldset>
+  </form>
+</div>
+           <!-- <div id="basic-info">
+             <form id="family-create" class="border">
                <fieldset>
-                 <div id="trails-create-message"></div>
-                    <legend>Create A Trail</legend>
-                    <input type="text" name="trail[trail_name]" placeholder="Enter Trail Name">
-                    <input type="text" name="trail[location]" placeholder="Enter Trail Location">
+                 <div id="family-create-message"></div>
+                    <legend>Add Family Info</legend>
+                    <input type="text" name="family[family_name]" placeholder="Enter Family Name">
+                    <input type="text" name="family[child_name]" placeholder="Enter Child's Name">
                     <input type="text" name="trail[distance]" placeholder="Enter Trail Distance">
                     <input type="text" name="trail[elevation_gain]" placeholder="Enter Trail Elevation Gain">
                     <input type="text" name="trail[trail_type]" placeholder="Enter Trail Type">
                     <input type="text" name="trail[skill_level]" placeholder="Enter Trail Skill Level">
                     <input type="submit" value="Create Trail">
                   </fieldset>
-                </form>
-                <form id="trails-index" class="border">
+                </form> -->
+                <!-- <form id="trails-index" class="border">
                   <fieldset>
                     <div id="trails-index-message"></div>
                     <legend>Get All Trails</legend>
@@ -106,7 +241,7 @@
                   </fieldset>
                 </form>
                 <div id="content"></div>
-              </div>
+              </div> -->
         <!-- End Hidden Divs -->
         <!-- User Info -->
               <div class='userInfo'>
