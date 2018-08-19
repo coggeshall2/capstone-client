@@ -27,9 +27,11 @@
              <fieldset>
                <h2>Register!</h2>
                <div id='sign-up-message'></div>
+               <div>
                <input type="email" name="credentials[email]" placeholder="Email"><br>
                <input type="password" name="credentials[password]" placeholder="Password"><br>
-               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
+               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br><br>
+              </div>
                <input type="submit" value="Register!">
              </fieldset>
             </form>
@@ -39,8 +41,10 @@
             <fieldset>
               <h2>Sign In!</h2>
               <div id="sign-in-message"></div>
+              <div>
                 <input type="text" name="credentials[email]" placeholder="Email"><br>
-                <input type="password" name="credentials[password]" placeholder="Password"><br>
+                <input type="password" name="credentials[password]" placeholder="Password"><br><br>
+              </div>
                 <input type="submit" value="Sign In!">
             </fieldset>
            </form>
@@ -85,8 +89,10 @@
       </div>
       <div>
         <h3>Precious memories of the birth</h3>
-        <textarea name="family[memory]" form="birthday">Enter other memorable info here...</textarea>
+        <textarea name="family[memory]" form="birthday">Enter other memorable info here...</textarea><br><br>
       </div>
+      <input type="submit" value="Submit">
+
       </fieldset>
     </form>
   </div>
@@ -158,7 +164,9 @@
       </div>
       <div>
         <h3>First other</h3>
-        <textarea name="first[other]" form="baby-firsts">Enter babies first...</textarea>
+        <textarea name="first[other]" form="baby-firsts">Enter babies first...</textarea><br><br>
+      </div>
+        <input type="submit" value="Submit">
     </fieldset>
   </form>
 </div>
@@ -176,8 +184,9 @@
     </div>
     <div>
       <h3>Favorite toys</h3>
-      <textarea name="favorites[toys]" form="favorites">Enter babies favorite...</textarea>
+      <textarea name="favorites[toys]" form="favorites">Enter babies favorite...</textarea><br><br>
     </div>
+      <input type="submit" value="Submit">
     </fieldset>
   </form>
 </div>
