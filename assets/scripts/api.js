@@ -52,7 +52,7 @@ const updateTrail = function (data) {
     })
   }
 
-const createTrail = function (data) {
+const createFamily = function (data) {
   console.log('data is ', data)
   console.log(store)
   return $.ajax({
@@ -66,10 +66,40 @@ const createTrail = function (data) {
     })
   }
 
+  const createFirsts = function (data) {
+    console.log('data is ', data)
+    console.log(store)
+    return $.ajax({
+      url: config.apiUrl + '/trails',
+      method: 'POST',
+      headers: {
+          Authorization: 'Token token=' + store.user.token
+        },
+        data
+        // data: data
+      })
+    }
+
+    const createFavorites = function (data) {
+      console.log('data is ', data)
+      console.log(store)
+      return $.ajax({
+        url: config.apiUrl + '/trails',
+        method: 'POST',
+        headers: {
+            Authorization: 'Token token=' + store.user.token
+          },
+          data
+          // data: data
+        })
+      }
+
 module.exports = {
-  trailsIndex,
-  getTrail,
-  destroyTrail,
-  updateTrail,
-  createTrail
+  // trailsIndex,
+  // getTrail,
+  // destroyTrail,
+  // updateTrail,
+  createFamily,
+  createFirsts,
+  createFavorites
 }

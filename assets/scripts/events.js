@@ -79,11 +79,34 @@ const getFormFields = require('../../lib/get-form-fields.js')
 //     }
 // }
 
-// const onCreateTrail = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
+const onCreateFamily = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.createFamily(data)
+    .then(ui.onCreateSuccess)
+    .catch(ui.onError)
+  }
+
+
+const onCreateFirsts = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.createFirsts(data)
+    .then(ui.onCreateSuccess)
+    .catch(ui.onError)
+  }
+
+
+const onCreateFavorites = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.createFavorites(data)
+    .then(ui.onCreateSuccess)
+    .catch(ui.onError)
+  }
+
 //   // input validation
-//   if (data.trail.trail_name === '') {
+//   if (data.family.family_name === '') {
 //     $('#content').html('<p>Trail name is required</p>')
 //   } else if (data.trail.location === '') {
 //     $('#content').html('<p>Location is required</p>')
@@ -98,19 +121,17 @@ const getFormFields = require('../../lib/get-form-fields.js')
 //   } else if (data.trail.skill_level === '') {
 //     $('#content').html('<p>Skil level is required</p>')
 //   } else {
-//     api.createTrail(data)
-//       .then(ui.onCreateSuccess)
-//       .catch(ui.onError)
-//     }
-// }
+
 
 
 
 
 module.exports = {
-  onTrailsIndex,
-  onGetTrail,
-  onDestroyTrail,
-  onUpdateTrail,
-  onCreateTrail
+  // onTrailsIndex,
+  // onGetTrail,
+  // onDestroyTrail,
+  // onUpdateTrail,
+  onCreateFamily,
+  onCreateFirsts,
+  onCreateFavorites
 }

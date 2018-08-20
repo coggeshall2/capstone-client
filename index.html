@@ -18,7 +18,7 @@
          <div id="wrapper-register">
          <div>
            <h1>Remember Me</h1>
-           <h3>A digital scrap book of all your foundest moments in your babies first years</h3>
+           <h3>A digital scrap book of all your fondest moments in your babies first years</h3>
            <h4>First time users, please register and then sign in</h4>
            <div id="messages"></div>
          </div>
@@ -40,7 +40,7 @@
           <form id="sign-in">
             <fieldset>
               <h2>Sign In!</h2>
-              <div id="sign-in-message"></div>
+              <div id="messages"></div>
               <div>
                 <input type="text" name="credentials[email]" placeholder="Email"><br>
                 <input type="password" name="credentials[password]" placeholder="Password"><br><br>
@@ -89,10 +89,10 @@
       </div>
       <div>
         <h3>Precious memories of the birth</h3>
-        <textarea name="family[memory]" form="birthday">Enter other memorable info here...</textarea><br><br>
+        <textarea name="family[memory]" form="birthday" placeholder="Enter other memorable info here..."></textarea><br><br>
       </div>
       <input type="submit" value="Submit">
-
+      <div id="family-create-message"></div>
       </fieldset>
     </form>
   </div>
@@ -104,69 +104,70 @@
       <h2>Baby Firsts</h2>
       <div>
         <h3>First time baby smiles</h3>
-        <textarea name="first[smile]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[smile]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby giggles</h3>
-        <textarea name="first[laugh]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[laugh]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby rolls over</h3>
-        <textarea name="first[roll_over]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[roll_over]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby sits up</h3>
-        <textarea name="first[sitting_up]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[sitting_up]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First baby tooth</h3>
-        <textarea name="first[tooth]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[tooth]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby kisses</h3>
-        <textarea name="first[kisses]" form="baby-firsts">Enter babies first...</textarea></br>
+        <textarea name="first[kisses]" form="baby-firsts" placeholder="Enter babies first..."></textarea></br>
       </div>
       <div>
         <h3>First time baby crawls</h3>
-        <textarea name="first[crawling]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[crawling]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First foods</h3>
-        <textarea name="first[foods]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[foods]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby stands</h3>
-        <textarea name="first[standing]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[standing]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby waves bye-bye</h3>
-        <textarea name="first[waving]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[waving]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First baby steps</h3>
-        <textarea name="first[walking]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[walking]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First words</h3>
-        <textarea name="first[words]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[words]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First time baby says mama and dada</h3>
-        <textarea name="first[mama_dada]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[mama_dada]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First haircut</h3>
-        <textarea name="first[haircut]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[haircut]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First birthday</h3>
-        <textarea name="first[birthday]" form="baby-firsts">Enter babies first...</textarea><br>
+        <textarea name="first[birthday]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br>
       </div>
       <div>
         <h3>First other</h3>
-        <textarea name="first[other]" form="baby-firsts">Enter babies first...</textarea><br><br>
+        <textarea name="first[other]" form="baby-firsts" placeholder="Enter babies first..."></textarea><br><br>
       </div>
         <input type="submit" value="Submit">
+          <div id="firsts-create-message"></div>
     </fieldset>
   </form>
 </div>
@@ -176,29 +177,37 @@
       <h2>Babies Favorites</h2>
     <div>
       <h3>Favorite foods</h3>
-      <textarea name="favorites[foods]" form="favorites">Enter babies favorite...</textarea><br>
+      <textarea name="favorites[foods]" form="favorites" placeholder="Enter babies favorite..."></textarea><br>
     </div>
     <div>
       <h3>Favorite songs/lullabyes</h3>
-      <textarea name="favorites[songs]" form="favorites">Enter babies favorite...</textarea><br>
+      <textarea name="favorites[songs]" form="favorites" placeholder="Enter babies favorite..."></textarea><br>
     </div>
     <div>
       <h3>Favorite toys</h3>
-      <textarea name="favorites[toys]" form="favorites">Enter babies favorite...</textarea><br><br>
+      <textarea name="favorites[toys]" form="favorites" placeholder="Enter babies favorite..."></textarea><br><br>
+    </div>
+    <div>
+      <h3>Favorite other</h3>
+      <textarea name="favorites[other]" form="favorites" placeholder="Enter babies favorite..."></textarea><br><br>
     </div>
       <input type="submit" value="Submit">
+    <div id="favorites-create-message"></div>
     </fieldset>
   </form>
 </div>
 <div id="wrapper-display-memories">
   <div id="content-family">
     <h3>Say hello to your bundle of joy</h3>
+      <div id="family-display-message"></div>
   </div>
   <div id="content-first">
     <h3>All of your babies firsts<h3>
+        <div id="firsts-display-message"></div>
   </div>
   <div id="content-favorites">
     <h3>All of your babies favorites</h3>
+      <div id="favorites-display-message"></div>
   </div>
 </div>
            <!-- <div id="basic-info">
