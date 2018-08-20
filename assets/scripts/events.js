@@ -4,7 +4,21 @@ const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
 
+const showCreateFamily = () => {
+  $('#wrapper-birth').fadeIn(); $('#wrapper-firsts,#wrapper-favorites').hide();
+}
 
+const showCreateFirsts = () => {
+  $('#wrapper-firsts').fadeIn(); $('#wrapper-birth,#wrapper-favorites').hide();
+}
+
+const showCreateFavorites = () => {
+  $('#wrapper-favorites').fadeIn(); $('#wrapper-birth,#wrapper-firsts').hide();
+}
+
+const showDisplayMemories = () => {
+  $('#wrapper-display-memories').fadeIn(); $('#wrapper-birth, #wrapper-firsts,#wrapper-favorites').hide();
+}
 // const onTrailsIndex = function(event){
 //   // prevent default submit action
 //   event.preventDefault()
@@ -124,7 +138,12 @@ const onCreateFavorites = function (event) {
 
 
 
-
+const addHandlers = () => {
+   $('#sign-in').on('submit', showCreateFamily);
+   $('#birthday').on('submit', showCreateFirsts);
+   $('#baby-firsts').on('submit', showCreateFavorites);
+    $('#baby-favorites').on('submit', showDisplayMemories);
+}
 
 module.exports = {
   // onTrailsIndex,

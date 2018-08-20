@@ -86,7 +86,32 @@ const store = require('./store')
 // // console.log('Successfully completed. Data is :', data)
 // }
 
-const onCreateSuccess = function (data) {
+const onCreateFamilySuccess = function (data) {
+  $('#content-family').html('')
+      // console.table(data.family)
+      // loop through API response data
+      // build HTML element with data
+        const familyHTML = (`
+          <h3>Babies Given Name</h3>
+          <div><p>${data.family.given_name}<p></div>
+          <h3>Babies Family Name</h3>
+          <div><p>${data.family.family_name}<p></div>
+          <h3>Babies Birth Date</h3>
+          <div><p>${data.family.birth_date}<p></div>
+          <h3>Babies Birth Weight</h3>
+          <div><p>${data.family.birth_weight}<p></div>
+          <h3>Babies Birth Length</h3>
+          <div><p>${data.family.birth_length}<p></div>
+          <h3>Babies Place of Birth</h3>
+          <div><p>${data.family.hospital_name}<p></div>
+          <h3>Babies Delivery Doctor's Name/h3>
+          <div><p>${data.family.doctor_name}<p></div>
+          <h3>Precious Memories of the Birth</h3>
+          <div><p>${data.family.memory}<p></div>
+          <br>
+        `)
+        // append familyHTML to content
+        $('#content-family').append(familyHTML)
   $('#family-display-message').html('You created a new memory!')
   $('#family-display-message').text('Successfully Created New Memory')
   $('#family-display-message').css('background-color', 'green')
@@ -94,6 +119,84 @@ const onCreateSuccess = function (data) {
   // console.log('Successfully run. Data is :', data)
   // reset form
   $('#family-create').trigger("reset")
+}
+
+const onCreateFirstsSuccess = function (data) {
+  $('#content-firsts').html('')
+      // console.table(data.firsts)
+      // loop through API response data
+      // build HTML element with data
+        const firstsHTML = (`
+          <h3>Babies First Smile</h3>
+          <div><p>${data.firsts.smile}<p></div>
+          <h3>Babies First Laugh</h3>
+          <div><p>${data.firsts.laugh}<p></div>
+          <h3>Babies First Time Rolling Over</h3>
+          <div><p>${data.firsts.roll_over}<p></div>
+          <h3>Babies First Time Sitting Up</h3>
+          <div><p>${data.firsts.sitting_up}<p></div>
+          <h3>Babies First Tooth</h3>
+          <div><p>${data.firsts.tooth}<p></div>
+          <h3>Babies First Kisses</h3>
+          <div><p>${data.firsts.kisses}<p></div>
+          <h3>Babies First Time Crawling/h3>
+          <div><p>${data.firsts.crawling}<p></div>
+          <h3>Babies First Foods</h3>
+          <div><p>${data.firsts.foods}<p></div>
+          <h3>Babies First Time Standing</h3>
+          <div><p>${data.firsts.standing}<p></div>
+          <h3>Babies First Time Waving Bye-Bye</h3>
+          <div><p>${data.firsts.waving}<p></div>
+          <h3>Babies First Steps</h3>
+          <div><p>${data.firsts.walking}<p></div>
+          <h3>Babies First Words</h3>
+          <div><p>${data.firsts.words}<p></div>
+          <h3>Babies First Time Saying Mama and Dada</h3>
+          <div><p>${data.firsts.mama_dada}<p></div>
+          <h3>Babies First Haircut</h3>
+          <div><p>${data.firsts.haircut}<p></div>
+          <h3>Babies First Birthday</h3>
+          <div><p>${data.firsts.birthday}<p></div>
+          <h3>Other Precious First Memories</h3>
+          <div><p>${data.firsts.other}<p></div>
+          <br>
+        `)
+        // append familyHTML to content
+        $('#content-firsts').append(firstsHTML)
+  $('#firsts-display-message').html('You created a new memory!')
+  $('#firsts-display-message').text('Successfully Created New Memory')
+  $('#firsts-display-message').css('background-color', 'green')
+  $('#firsts-display-message').fadeOut(10000)
+  // console.log('Successfully run. Data is :', data)
+  // reset form
+  $('#firsts-create').trigger("reset")
+}
+
+const onCreateFavoritesSuccess = function (data) {
+  $('#content-favorites').html('')
+      // console.table(data.favorites)
+      // loop through API response data
+      // build HTML element with data
+        const favoritesHTML = (`
+          <h3>Babies Favorite Foods</h3>
+          <div><p>${data.favorites.foods}<p></div>
+          <h3>Babies Favorite Songs/Lullabyes</h3>
+          <div><p>${data.favorites.songs}<p></div>
+          <h3>Babies Favorite Toys</h3>
+          <div><p>${data.favorites.toys}<p></div>
+          <h3>Other Babies Favorites</h3>
+          <div><p>${data.favorites.other}<p></div>
+          <br>
+        `)
+        // append familyHTML to content
+        $('#content-favorites').append(favoritesHTML)
+  $('#favorites-display-message').html('You created a new memory!')
+  $('#favorites-display-message').text('Successfully Created New Memory')
+  $('#favorites-display-message').css('background-color', 'green')
+  $('#favorites-display-message').fadeOut(10000)
+  // console.log('Successfully run. Data is :', data)
+  // reset form
+  $('#favorites-create').trigger("reset")
 }
 
 const onFailure = function(data){
@@ -112,6 +215,8 @@ module.exports = {
   // onGetSuccess,
   // onDestroySuccess,
   // onUpdateSuccess,
-  onCreateSuccess,
+  onCreateFamilySuccess,
+  onCreateFirstsSuccess,
+  onCreateFavoritesSuccess,
   onFailure
 }
