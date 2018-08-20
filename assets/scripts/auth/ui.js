@@ -7,7 +7,7 @@ const signUpSuccess = function (data) {
   $('#messages').css('background-color', 'green')
   $('#messages').fadeOut(10000)
   $('#signUp').css('display', 'none')
-  // console.log('signUpSuccess ran. Data is :', data)
+  console.log('signUpSuccess ran. Data is :', data)
   $('#sign-up').trigger('reset')
 }
 
@@ -15,7 +15,7 @@ const signUpFailure = function (error) {
   $('#messages').text('Error on sign up')
   $('#messages').css('background-color', 'red')
   $('#messages').fadeOut(10000)
-  // console.log('signUpFailure ran. Error is :', error)
+  console.log('signUpFailure ran. Error is :', error)
 }
 
 const signInSuccess = function (data) {
@@ -27,14 +27,14 @@ const signInSuccess = function (data) {
   $('.userButtons').css('display', 'block')
   store.user = data.user
   $('#sign-in').trigger('reset')
-  // console.log('signInSuccess ran. Data is :', data)
+  console.log('signInSuccess ran. Data is :', data)
 }
 
 const signInFailure = function (error) {
   $('#messages').text('Error on sign in')
   $('#messages').css('background-color', 'red')
   $('#messages').fadeOut(10000)
-  // console.log('signInFailure ran. Error is :', error)
+  console.log('signInFailure ran. Error is :', error)
 }
 
 const signOutSuccess = function () {
@@ -54,7 +54,7 @@ const signOutFailure = function (error) {
   $('#messages').text('Error on sign Out')
   $('#messages').css('background-color', 'red')
   $('#messages').fadeOut(10000)
-  // console.log('signOutFailure ran. Error is :', error)
+  console.log('signOutFailure ran. Error is :', error)
 }
 
 const changePasswordSuccess = function () {
@@ -68,7 +68,7 @@ const changePasswordFailure = function (error) {
   $('#change-password-message').text('Error on change password')
   $('#change-password-message').css('background-color', 'red')
   $('#change-password-message').fadeOut(10000)
-  // console.log('changePasswordFailure ran. Error is :', error)
+  console.log('changePasswordFailure ran. Error is :', error)
 }
 
 

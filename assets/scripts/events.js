@@ -4,8 +4,12 @@ const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
 
+const showRegister = () => {
+  $('#wrapper-register').show(); $('#wrapper-birth, #wrapper-firsts,#wrapper-favorites').hide();
+}
+
 const showCreateFamily = () => {
-  $('#wrapper-birth').fadeIn(); $('#wrapper-firsts,#wrapper-favorites').hide();
+  $('#wrapper-birth, .userInfo').fadeIn(); $('#wrapper-firsts,#wrapper-favorites').hide();
 }
 
 const showCreateFirsts = () => {
@@ -142,7 +146,7 @@ const addHandlers = () => {
    $('#sign-in').on('submit', showCreateFamily);
    $('#birthday').on('submit', showCreateFirsts);
    $('#baby-firsts').on('submit', showCreateFavorites);
-    $('#baby-favorites').on('submit', showDisplayMemories);
+   $('#baby-favorites').on('submit', showDisplayMemories);
 }
 
 module.exports = {

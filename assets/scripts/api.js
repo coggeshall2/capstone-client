@@ -56,7 +56,7 @@ const createFamily = function (data) {
   console.log('data is ', data)
   console.log(store)
   return $.ajax({
-    url: config.apiUrl + '/family',
+    url: config.apiUrl + '/families',
     method: 'POST',
     headers: {
         Authorization: 'Token token=' + store.user.token
