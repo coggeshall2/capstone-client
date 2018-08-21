@@ -88,7 +88,7 @@ const store = require('./store')
 
 const onCreateFamilySuccess = function (data) {
   $('#content-family').html('')
-      // console.table(data.family)
+      console.table(data.family)
       // loop through API response data
       // build HTML element with data
         const familyHTML = (`
@@ -173,6 +173,7 @@ const onCreateFirstsSuccess = function (data) {
 }
 
 const onCreateFavoritesSuccess = function (data) {
+  console.log('Favorites data is ' (data))
   $('#content-favorites').html('')
       // console.table(data.favorites)
       // loop through API response data

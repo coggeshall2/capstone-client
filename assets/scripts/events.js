@@ -9,19 +9,19 @@ const showRegister = () => {
 }
 
 const showCreateFamily = () => {
-  $('#wrapper-birth, .userInfo').fadeIn(); $('#wrapper-firsts,#wrapper-favorites').hide();
+  $('#wrapper-birth').fadeIn(); $('#wrapper-register').hide();
 }
 
 const showCreateFirsts = () => {
-  $('#wrapper-firsts').fadeIn(); $('#wrapper-birth,#wrapper-favorites').hide();
+  $('#wrapper-firsts').fadeIn(); $('#wrapper-birth').hide();
 }
 
 const showCreateFavorites = () => {
-  $('#wrapper-favorites').fadeIn(); $('#wrapper-birth,#wrapper-firsts').hide();
+  $('#wrapper-favorites').fadeIn(); $('#wrapper-firsts').hide();
 }
 
 const showDisplayMemories = () => {
-  $('#wrapper-display-memories').fadeIn(); $('#wrapper-birth, #wrapper-firsts,#wrapper-favorites').hide();
+  $('#wrapper-display-memories').fadeIn(); $('#wrapper-favorites').hide();
 }
 // const onTrailsIndex = function(event){
 //   // prevent default submit action
