@@ -87,8 +87,53 @@ const store = require('./store')
 // }
 
 const onCreateFamilySuccess = function (data) {
+  $('#content-family').html('You created a new memory!')
+  $('#family-display-message').text('Successfully Created New Trail')
+  $('#family-display-message').css('background-color', 'green')
+  $('#family-display-message').fadeOut(10000)
+  // console.log('Successfully run. Data is :', data)
+  // reset form
+  $('#families-create').trigger("reset")
+}
+
+const onIndexSuccess = function(data){
+  // empty content element
   $('#content-family').html('')
-      console.table(data.family)
+  console.table(data.families)
+  // loop through API response data
+  data.families.forEach(family => {
+    // build HTML element with data
+    const familyHTML = (`
+      <h3>Babies Given Name</h3>
+      <div><p>${data.family.given_name}<p></div>
+      <h3>Babies Family Name</h3>
+      <div><p>${data.family.family_name}<p></div>
+      <h3>Babies Birth Date</h3>
+      <div><p>${data.family.birth_date}<p></div>
+      <h3>Babies Birth Weight</h3>
+      <div><p>${data.family.birth_weight}<p></div>
+      <h3>Babies Birth Length</h3>
+      <div><p>${data.family.birth_length}<p></div>
+      <h3>Babies Place of Birth</h3>
+      <div><p>${data.family.hospital_name}<p></div>
+      <h3>Babies Delivery Doctor's Name/h3>
+      <div><p>${data.family.doctor_name}<p></div>
+      <h3>Precious Memories of the Birth</h3>
+      <div><p>${data.family.memory}<p></div>
+      <br>
+      `)
+    // append trailHTML to content
+    $('#content-family').append(familyHTML)
+    $('#family-display-message').text('Successfully Completed Task, scroll down for results')
+    $('#family-display-message').css('background-color', 'green')
+    $('#family-display-message').fadeOut(10000)
+    console.log('Successfully completed. Data is :', data)
+  })
+}
+
+const onGetSuccess = function (data) {
+          $('#content-family').html('')
+      // console.table(data.trails)
       // loop through API response data
       // build HTML element with data
         const familyHTML = (`
@@ -110,16 +155,16 @@ const onCreateFamilySuccess = function (data) {
           <div><p>${data.family.memory}<p></div>
           <br>
         `)
-        // append familyHTML to content
-        $('#content-family').append(familyHTML)
-  $('#family-display-message').html('You created a new memory!')
-  $('#family-display-message').text('Successfully Created New Memory')
-  $('#family-display-message').css('background-color', 'green')
-  $('#family-display-message').fadeOut(10000)
-  // console.log('Successfully run. Data is :', data)
+        // append trailHTML to content
+        $('#content').append(trailHTML)
+        $('#family-display-message').text('Successfully Completed Task, scroll down for results')
+        $('#family-display-message').css('background-color', 'green')
+        $('#family-display-message').fadeOut(10000)
+        console.log('Successfully completed. Data is :', data)
+    }
+
   // reset form
-  $('#family-create').trigger("reset")
-}
+  $('#familiess-show').trigger("reset")
 
 const onCreateFirstsSuccess = function (data) {
   $('#content-firsts').html('')
@@ -217,6 +262,8 @@ module.exports = {
   // onDestroySuccess,
   // onUpdateSuccess,
   onCreateFamilySuccess,
+  onIndexSuccess,
+  onGetSuccess,
   onCreateFirstsSuccess,
   onCreateFavoritesSuccess,
   onFailure

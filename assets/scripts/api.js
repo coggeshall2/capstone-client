@@ -54,9 +54,9 @@ const store = require('./store')
 
 const createFamily = function (data) {
   console.log('data is ', data)
-  console.log(store)
+  console.log('data is ', store)
   return $.ajax({
-    url: config.apiUrl + '/families',
+    url: config.apiUrl + '/families/',
     method: 'POST',
     headers: {
         Authorization: 'Token token=' + store.user.token
@@ -65,6 +65,29 @@ const createFamily = function (data) {
       // data: data
     })
   }
+
+  const familiesIndex = function(data){
+  console.log('data is ', data)
+  console.log(store)
+  // make GET request to /trails
+  return $.ajax({
+    url: config.apiUrl + '/families/',
+    method: 'GET'
+  })
+}
+
+const getFamily = function (data) {
+    console.log('data is ', data)
+    console.log(store)
+  return $.ajax({
+    url: config.apiUrl + '/families/' + data.family.id,
+    method: 'GET',
+    headers:{
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 
   const createFirsts = function (data) {
     console.log('data is ', data)
@@ -100,6 +123,8 @@ module.exports = {
   // destroyTrail,
   // updateTrail,
   createFamily,
+  familiesIndex,
+  getFamily,
   createFirsts,
   createFavorites
 }

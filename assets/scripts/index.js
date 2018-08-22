@@ -12,9 +12,9 @@ $(() => {
   // your JS code goes here
   authEvents.addHandlers()
 
-  $('#birthday').on('submit', events.onCreateFamily)
-  $('#baby-firsts').on('submit', events.onCreateFirsts)
-  $('#favorites').on('submit', events.onCreateFavorites)
-  // $('#trails-update').on('submit', events.onUpdateTrail)
-  // $('#trails-create').on('submit', events.onCreateTrail)
+  $('#family-index').on('submit', events.onFamiliesIndex)
+  $('#family-show').on('submit', events.onGetFamily)
+  $('#family-delete').on('submit', events.onDestroyFamily)
+  $('#family-update').on('submit', events.onUpdateFamily)
+  $('#family-create').on('submit', events.onCreateFamily)
 })

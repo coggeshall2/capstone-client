@@ -15,13 +15,19 @@
     <body>
        <!-- HEADER -->
        <header >
-         <div id="wrapper-register">
+
          <div>
            <h1>Remember Me</h1>
            <h3>A digital scrap book of all your fondest moments in your babies first years</h3>
-           <h4>First time users, please register and then sign in</h4>
+
            <div id="messages"></div>
          </div>
+         <h4>First time users, please register and then sign in</h4>
+         <div id="register" class='buttons'>
+         <button class = 'button' id='register'>Register/Login</button>
+         </div>
+        <div id="wrapper-register">
+
          <div id="signUp">
            <form id="sign-up">
              <fieldset>
@@ -52,6 +58,12 @@
          </div>
        </header>
          <br><br>
+         <div class='userButtons'>
+           <div class='buttons'>
+           <button class = 'button' id='memoryInfo'>Create Memories</button>
+           <button class = 'button' id='seeInfo'>User Info</button>
+           </div>
+         </div>
 
 <!-- Hidden Divs -->
 <div id="wrapper-birth">
@@ -92,7 +104,7 @@
         <h3>Precious memories of the birth</h3>
         <textarea name="family[memory]" form="birthday" placeholder="Enter other memorable info here..."></textarea><br><br>
       </div>
-      <input type="submit" value="Submit">
+      <input id="family-submit" type="submit" value="Submit">
       <div id="family-create-message"></div>
       </fieldset>
     </form>
@@ -100,7 +112,7 @@
 </div>
 <br><br>
 
-<div id="wrapper-firsts">
+<!-- <div id="wrapper-firsts">
   <form id="baby-firsts">
     <fieldset>
       <h2>Baby Firsts</h2>
@@ -200,7 +212,7 @@
     </fieldset>
   </form>
 </div>
-<br><br>
+<br><br> -->
 
 <div id="wrapper-display-memories">
 
@@ -208,14 +220,14 @@
     <div id="content-family">
       <div id="family-display-message"></div>
   </div>
-  <div id="content-firsts">
+  <!-- <div id="content-firsts">
     <h3>All of your babies firsts<h3>
     <div id="firsts-display-message"></div>
   </div>
   <div id="content-favorites">
     <h3>All of your babies favorites</h3>
     <div id="favorites-display-message"></div>
-  </div>
+  </div> -->
 </div>
            <!-- <div id="basic-info">
              <form id="family-create" class="border">

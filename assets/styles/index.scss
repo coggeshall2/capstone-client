@@ -15,6 +15,7 @@ body {
   border-width: thick;
   border-style: ridge;
   border-color: pink;
+  display: none;
 }
 
 #wrapper-birth {
@@ -22,44 +23,59 @@ body {
   border-width: thick;
   border-style: ridge;
   border-color: pink;
-  // display: none;
+  display: none;
 }
 
-#wrapper-firsts {
-  border-radius: 20px;
-  border-width: thick;
-  border-style: ridge;
-  border-color: pink;
-  // display: none;
-}
+// #wrapper-firsts {
+//   border-radius: 20px;
+//   border-width: thick;
+//   border-style: ridge;
+//   border-color: pink;
+//   display: none;
+// }
 
-#wrapper-favorites {
-  border-radius: 20px;
-  border-width: thick;
-  border-style: ridge;
-  border-color: pink;
-  // display: none;
-}
+// #wrapper-favorites {
+//   border-radius: 20px;
+//   border-width: thick;
+//   border-style: ridge;
+//   border-color: pink;
+//   display: none;
+// }
 
-#wrapper-display-memories {
-  border-radius: 20px;
-  border-width: thick;
-  border-style: ridge;
-  border-color: pink;
-  // display: none;
-}
+// #wrapper-display-memories {
+//   border-radius: 20px;
+//   border-width: thick;
+//   border-style: ridge;
+//   border-color: pink;
+//   display: none;
+// }
 
 .userInfo {
   border-radius: 20px;
   border-width: thick;
   border-style: ridge;
   border-color: pink;
+  display: none;
 }
+
+.userButtons {
+  display: none;
+}
+
+// #memoryInfo {
+//   display: none;
+// }
+//
+// #birthday {
+//   display: none;
+// }
+
+
 //
 // a {
 //     color: #bbb;
 // }
-// main {
+// main
 //     min-height: 600px;
 // }
 //
@@ -120,21 +136,21 @@ body {
 //    display: none;
 // }
 //
-// .button {
-//     margin: 0 5px;
-//     background-color: #EB984E;
-//     border: none;
-//     color: #A04000;
-//     padding: 15px 30px;
-//     text-align: center;
-//     text-decoration: none;
-//     display: inline-block;
-//     font-size: 16px;
-// }
-// .buttons {
-//     margin: 20px 5px 5px 5px;
-//     padding-bottom: 20px;
-// }
+.button {
+    margin: 0 5px;
+    background-color: pink;
+    border: none;
+    color: #A04000;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.buttons {
+    margin: 20px 5px 5px 5px;
+    padding-bottom: 20px;
+}
 //
 // #change-password {
 //     margin: 5px;
