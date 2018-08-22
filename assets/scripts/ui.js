@@ -254,7 +254,7 @@ const onFailure = function(data){
   $('#memory-display-message').html('Something went wrong, please try again.')
   $('#memory-display-message').text('Error on submit')
   $('#memory-display-message').css('background-color', 'red')
-  // console.error('Failure when command ran. Error is :', error)
+  console.error('Failure when command ran. Error is :', error)
 }
 
 module.exports = {

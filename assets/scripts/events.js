@@ -40,16 +40,12 @@ const showChangePassword = () => {
 
 const onGetMemory = function (event) {
   event.preventDefault()
-
   // create js object from user form data
   const data = getFormFields(event.target)
-
   // input validation
   if (data.memory.id === '') {
     $('#content-memory').html('<p>ID is required</p>')
-
   } else {
-
     // make API call with data
     api.getMemory(data)
       .then(ui.onGetSuccess)
@@ -59,13 +55,10 @@ const onGetMemory = function (event) {
 
 const onDestroyMemory = function (event) {
   event.preventDefault()
-
   const data = getFormFields(event.target)
-
   // input validation
   if (data.memory.id === '') {
     $('#content-memory').html('<p>ID is required</p>')
-
   } else {
     api.destroyMemory(data)
       .then(ui.onDestroySuccess)
@@ -73,30 +66,33 @@ const onDestroyMemory = function (event) {
   }
 }
 
-// const onUpdateFamily = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   // input validation
-//   if (data.family.id === '') {
-//     $('#content-family').html('<p>ID is required</p>')
-//   } else if (data.family.given_name === '') {
-//     $('#content').html('<p>Given name is required</p>')
-//   } else if (data.trail.location === '') {
-//     $('#content').html('<p>Location is required</p>')
-//   } else if (data.trail.distance === '') {
-//     $('#content').html('<p>Distance is required</p>')
-//   } else if (data.trail.elevation_gain === '') {
-//     $('#content').html('<p>Elevation gain is required</p>')
-//   } else if (data.trail.trail_type === '') {
-//     $('#content').html('<p>Trail type is required</p>')
-//   } else if (data.trail.skill_level === '') {
-//     $('#content').html('<p>Skil level is required</p>')
-//   } else {
-//     api.updateTrail(data)
-//       .then(ui.onUpdateSuccess)
-//       .catch(ui.onError)
-//     }
-// }
+const onUpdateMemory = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // input validation
+  if (data.memory.id === '') {
+    $('#content-memory').html('<p>ID is required</p>')
+  } else if (data.memory.given_name === '') {
+    $('#content-memory').html('<p>Given name is required</p>')
+  } else if (data.memory.family_name === '') {
+    $('#content-memory').html('<p>Family name is required</p>')
+  } else if (data.memory.birth_date === '') {
+    $('#content-memory').html('<p>Birth date is required</p>')
+  } else if (data.memory.birth_weight === '') {
+    $('#content-memory').html('<p>Birth weight is required</p>')
+  } else if (data.memory.birth_length === '') {
+    $('#content-memory').html('<p>Birth length is required</p>')
+  } else if (data.memory.hospital_name === '') {
+    $('#content-memory').html('<p>Hospital name is required</p>')
+  } else if (data.memory.doctor_name === '') {
+    $('#content-memory').html('<p>Doctor name is required</p>')
+  } else if (data.memory.memory === '') {
+    $('#content-memory').html('<p>Other memory is required</p>')
+    api.updateMemory(data)
+      .then(ui.onUpdateSuccess)
+      .catch(ui.onError)
+    }
+}
 
 const onCreateMemory = function (event) {
   event.preventDefault()
@@ -123,45 +119,17 @@ console.log('create function begins')
   }
 
 
-
-
-// const onCreateFirsts = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.createFirsts(data)
-//     .then(ui.onCreateSuccess)
-//     .catch(ui.onError)
-//   }
-//
-//
-// const onCreateFavorites = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.createFavorites(data)
-//     .then(ui.onCreateSuccess)
-//     .catch(ui.onError)
-//   }
-
-
-
-
 const addHandlers = () => {
   $('#register').on('submit', showCreateMemory);
   $('#memoryInfo').on('submit', showCreateMemory);
   $('#seeInfo').on('click', showChangePassword);
   $('#memory-submit').on('submit', onCreateMemory);
-   // $('#baby-firsts').on('submit', showCreateFavorites);
-   // $('#baby-favorites').on('submit', showDisplayMemories);
 }
 
 module.exports = {
-
-
   onDestroyMemory,
-  // onUpdateTrail,
+  onUpdateMemory,
   onCreateMemory,
   onMemoriesIndex,
   onGetMemory,
-  // onCreateFirsts,
-  // onCreateFavorites
 }
