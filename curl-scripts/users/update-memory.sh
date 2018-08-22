@@ -1,9 +1,9 @@
 #!/bin/bash
 
-curl "http://localhost:4741" \
+curl "http://localhost:4741/${ID}" \
   --include \
-  --request POST \
-  --header "Content-type: application/json" \
+  --request PATCH \
+  --header "Content-Type: application/json" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     memory: {

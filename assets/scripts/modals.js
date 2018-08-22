@@ -1,10 +1,10 @@
 
 // toggle register info
-$(document).ready(function () {
-  $('#sign-in').submit(function () {
-    $('#wrapper-register').toggle()
-  })
-})
+// $(document).ready(function () {
+//   $('#sign-in').submit(function () {
+//     $('#wrapper-register').toggle()
+//   })
+// })
 
 // toggle sign-in info
 // $(document).ready(function () {
@@ -20,11 +20,11 @@ $(document).ready(function () {
 // })
 //
 // toggle register/login
-$(document).ready(function () {
-  $('#register').click(function () {
-    $('#wrapper-register').toggle()
-  })
-})
+// $(document).ready(function () {
+//   $('#register').click(function () {
+//     $('#wrapper-register').toggle()
+//   })
+// })
 
 // toggle create memory
 $(document).ready(function () {

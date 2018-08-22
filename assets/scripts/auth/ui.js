@@ -9,6 +9,7 @@ const signUpSuccess = function (data) {
   $('#signUp').css('display', 'none')
   console.log('signUpSuccess ran. Data is :', data)
   $('#sign-up').trigger('reset')
+
 }
 
 const signUpFailure = function (error) {
@@ -28,6 +29,7 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#sign-in').trigger('reset')
   console.log('signInSuccess ran. Data is :', data)
+  $('#wrapper-register, #register').hide();
 }
 
 const signInFailure = function (error) {

@@ -12,9 +12,9 @@ $(() => {
   // your JS code goes here
   authEvents.addHandlers()
 
-  $('#family-index').on('submit', events.onFamiliesIndex)
-  $('#family-show').on('submit', events.onGetFamily)
-  $('#family-delete').on('submit', events.onDestroyFamily)
-  $('#family-update').on('submit', events.onUpdateFamily)
-  $('#family-create').on('submit', events.onCreateFamily)
+  // $('#family-index').on('submit', events.onFamiliesIndex)
+  // $('#family-show').on('submit', events.onGetFamily)
+  // $('#family-delete').on('submit', events.onDestroyFamily)
+  // $('#family-update').on('submit', events.onUpdateFamily)
+  $('#memory-create').on('submit', events.onCreateMemory)
 })

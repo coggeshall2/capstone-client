@@ -4,14 +4,15 @@ const ui = require('./ui.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
 
-const showRegister = () => {
-  $('#wrapper-register').show(); $('#wrapper-birth').hide();
+
+
+const showCreateMemory = () => {
+  $('#wrapper-birth').show();
 }
 
-const showCreateFamily = () => {
-  $('#wrapper-birth').fadeIn(); $('#wrapper-register').hide();
+const showChangePassword = () => {
+  $('.userInfo').show();
 }
-
 // const showCreateFirsts = () => {
 //   $('#wrapper-firsts').fadeIn(); $('#wrapper-birth').hide();
 // }
@@ -21,7 +22,7 @@ const showCreateFamily = () => {
 // }
 //
 // const showDisplayMemories = () => {
-//   $('#wrapper-display-memories').fadeIn(); $('#wrapper-favorites').hide();
+//   $('#wrapper-display-memories').fadeIn(); $('#wrapper-birth').hide();
 // }
 // const onTrailsIndex = function(event){
 //   // prevent default submit action
@@ -37,36 +38,36 @@ const showCreateFamily = () => {
 //   .catch(ui.onError)
 // }
 
-const onGetFamily = function (event) {
+const onGetMemory = function (event) {
   event.preventDefault()
 
   // create js object from user form data
   const data = getFormFields(event.target)
 
   // input validation
-  if (data.family.id === '') {
-    $('#content-family').html('<p>ID is required</p>')
+  if (data.memory.id === '') {
+    $('#content-memory').html('<p>ID is required</p>')
 
   } else {
 
     // make API call with data
-    api.getFamily(data)
+    api.getMemory(data)
       .then(ui.onGetSuccess)
       .catch(ui.onError)
   }
  }
 
-const onDestroyFamily = function (event) {
+const onDestroyMemory = function (event) {
   event.preventDefault()
 
   const data = getFormFields(event.target)
 
   // input validation
-  if (data.family.id === '') {
-    $('#content-family').html('<p>ID is required</p>')
+  if (data.memory.id === '') {
+    $('#content-memory').html('<p>ID is required</p>')
 
   } else {
-    api.destroyFamily(data)
+    api.destroyMemory(data)
       .then(ui.onDestroySuccess)
       .catch(ui.onError)
   }
@@ -97,20 +98,22 @@ const onDestroyFamily = function (event) {
 //     }
 // }
 
-const onCreateFamily = function (event) {
+const onCreateMemory = function (event) {
   event.preventDefault()
+console.log('create function begins')
   const data = getFormFields(event.target)
-  api.createFamily(data)
+  api.createMemory(data)
+  console.log('create memory ran, data is ', data)
     .then(ui.onCreateSuccess)
     .catch(ui.onError)
   }
 
-  const onFamiliesIndex = function(event){
+  const onMemoriesIndex = function(event){
     // prevent default submit action
     event.preventDefault()
-    console.log('get families ran')
+    console.log('get memories ran')
     // make API call
-    api.familiesIndex()
+    api.memoriesIndex()
   console.log('api call')
     // if API call is successful then
     .then(ui.onIndexSuccess)
@@ -143,8 +146,10 @@ const onCreateFamily = function (event) {
 
 
 const addHandlers = () => {
-   $('#sign-in').on('submit', showCreateFamily);
-   // $('#birthday').on('submit', showCreateFirsts);
+  $('#register').on('submit', showCreateMemory);
+  $('#memoryInfo').on('submit', showCreateMemory);
+  $('#seeInfo').on('click', showChangePassword);
+  $('#memory-submit').on('submit', onCreateMemory);
    // $('#baby-firsts').on('submit', showCreateFavorites);
    // $('#baby-favorites').on('submit', showDisplayMemories);
 }
@@ -152,11 +157,11 @@ const addHandlers = () => {
 module.exports = {
 
 
-  onDestroyFamily,
+  onDestroyMemory,
   // onUpdateTrail,
-  onCreateFamily,
-  onFamiliesIndex,
-  onGetFamily,
-  onCreateFirsts,
-  onCreateFavorites
+  onCreateMemory,
+  onMemoriesIndex,
+  onGetMemory,
+  // onCreateFirsts,
+  // onCreateFavorites
 }

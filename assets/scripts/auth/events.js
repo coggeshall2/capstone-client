@@ -5,6 +5,11 @@ const getFormFields = require('../../../lib/get-form-fields')
 const api = require('../auth/api')
 const ui = require('../auth/ui')
 
+const showRegister = () => {
+  $('#wrapper-register').show();
+}
+
+
 const onSignUp = function (event) {
   // important to have event.preventDefault!!!!
 
@@ -49,6 +54,7 @@ const onSignOut = function (event) {
 }
 
 const addHandlers = () => {
+  $('#register').on('click', showRegister)
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#sign-out').on('submit', onSignOut)

@@ -52,11 +52,11 @@ const store = require('./store')
 //     })
 //   }
 
-const createFamily = function (data) {
+const createMemory = function (data) {
   console.log('data is ', data)
   console.log('data is ', store)
   return $.ajax({
-    url: config.apiUrl + '/families/',
+    url: config.apiUrl + '/memories/',
     method: 'POST',
     headers: {
         Authorization: 'Token token=' + store.user.token
@@ -66,21 +66,21 @@ const createFamily = function (data) {
     })
   }
 
-  const familiesIndex = function(data){
+  const memoriesIndex = function(data){
   console.log('data is ', data)
   console.log(store)
-  // make GET request to /trails
+  // make GET request to /memories
   return $.ajax({
-    url: config.apiUrl + '/families/',
+    url: config.apiUrl + '/memories/',
     method: 'GET'
   })
 }
 
-const getFamily = function (data) {
+const getMemory = function (data) {
     console.log('data is ', data)
     console.log(store)
   return $.ajax({
-    url: config.apiUrl + '/families/' + data.family.id,
+    url: config.apiUrl + '/memories/' + data.family.id,
     method: 'GET',
     headers:{
       Authorization: 'Token token=' + store.user.token
@@ -89,42 +89,42 @@ const getFamily = function (data) {
   })
 }
 
-  const createFirsts = function (data) {
-    console.log('data is ', data)
-    console.log(store)
-    return $.ajax({
-      url: config.apiUrl + '/firsts',
-      method: 'POST',
-      headers: {
-          Authorization: 'Token token=' + store.user.token
-        },
-        data
-        // data: data
-      })
-    }
-
-    const createFavorites = function (data) {
-      console.log('data is ', data)
-      console.log(store)
-      return $.ajax({
-        url: config.apiUrl + '/favorites',
-        method: 'POST',
-        headers: {
-            Authorization: 'Token token=' + store.user.token
-          },
-          data
-          // data: data
-        })
-      }
+  // const createFirsts = function (data) {
+  //   console.log('data is ', data)
+  //   console.log(store)
+  //   return $.ajax({
+  //     url: config.apiUrl + '/firsts',
+  //     method: 'POST',
+  //     headers: {
+  //         Authorization: 'Token token=' + store.user.token
+  //       },
+  //       data
+  //       // data: data
+  //     })
+  //   }
+  //
+  //   const createFavorites = function (data) {
+  //     console.log('data is ', data)
+  //     console.log(store)
+  //     return $.ajax({
+  //       url: config.apiUrl + '/favorites',
+  //       method: 'POST',
+  //       headers: {
+  //           Authorization: 'Token token=' + store.user.token
+  //         },
+  //         data
+  //         // data: data
+  //       })
+  //     }
 
 module.exports = {
   // trailsIndex,
   // getTrail,
   // destroyTrail,
   // updateTrail,
-  createFamily,
-  familiesIndex,
-  getFamily,
-  createFirsts,
-  createFavorites
+  createMemory,
+  memoriesIndex,
+  getMemory,
+  // createFirsts,
+  // createFavorites
 }
