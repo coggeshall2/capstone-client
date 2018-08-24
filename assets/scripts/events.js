@@ -98,11 +98,32 @@ const onCreateMemory = function (event) {
   event.preventDefault()
 console.log('create function begins')
   const data = getFormFields(event.target)
+  // input validation
+  // if (data.memory.id === '') {
+  //   $('#content-memory').html('<p>ID is required</p>')
+   if (data.memory.given_name === '') {
+    $('#content-memory').html('<p>Given name is required</p>')
+  } else if (data.memory.family_name === '') {
+    $('#content-memory').html('<p>Family name is required</p>')
+  } else if (data.memory.birth_date === '') {
+    $('#content-memory').html('<p>Birth date is required</p>')
+  } else if (data.memory.birth_weight === '') {
+    $('#content-memory').html('<p>Birth weight is required</p>')
+  } else if (data.memory.birth_length === '') {
+    $('#content-memory').html('<p>Birth length is required</p>')
+  } else if (data.memory.hospital_name === '') {
+    $('#content-memory').html('<p>Hospital name is required</p>')
+  } else if (data.memory.doctor_name === '') {
+    $('#content-memory').html('<p>Doctor name is required</p>')
+  } else if (data.memory.memory === '') {
+    $('#content-memory').html('<p>Other memory is required</p>')
+  } else {
   api.createMemory(data)
-  console.log('create memory ran, data is ', data)
+  // console.log('create memory ran, data is ', data)
     .then(ui.onCreateSuccess)
     .catch(ui.onError)
   }
+}
 
   const onMemoriesIndex = function(event){
     // prevent default submit action
@@ -121,9 +142,10 @@ console.log('create function begins')
 
 const addHandlers = () => {
   $('#register').on('submit', showCreateMemory);
-  $('#memoryInfo').on('submit', showCreateMemory);
+  // $('#memoryInfo').on('click', showCreateMemory);
   $('#seeInfo').on('click', showChangePassword);
   $('#memory-submit').on('submit', onCreateMemory);
+  // $('#memory-submit').on('submit', onMemoriesIndex);
 }
 
 module.exports = {

@@ -54,7 +54,7 @@ const store = require('./store')
 
 const createMemory = function (data) {
   console.log('data is ', data)
-  console.log('data is ', store)
+  console.log(store)
   return $.ajax({
     url: config.apiUrl + '/memories/',
     method: 'POST',

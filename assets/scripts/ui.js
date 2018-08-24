@@ -94,7 +94,7 @@ const onCreateMemorySuccess = function (data) {
   $('#memory-display-message').fadeOut(10000)
   // console.log('Successfully run. Data is :', data)
   // reset form
-  $('#memories-create').trigger("reset")
+  $('#memory-create').trigger("reset")
 }
 
 const onIndexSuccess = function(data){
