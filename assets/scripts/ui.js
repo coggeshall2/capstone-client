@@ -1,271 +1,125 @@
 const store = require('./store')
 
-// const onIndexSuccess = function(data){
-//   // empty content element
-//   $('#content').html('')
-//   // console.table(data.trails)
-//   // loop through API response data
-//   data.trails.forEach(trail => {
-//     // build HTML element with data
-//     const trailHTML = (`
-//       <h4>Trail Name: ${trail.trail_name}</h4>
-//       <p>Trail ID: ${trail.id}</p>
-//       <p>Location: ${trail.location}</p>
-//       <p>Distance: ${trail.distance}</p>
-//       <p>Elevation gain: ${trail.elevation_gain}</p>
-//       <p>Trail type: ${trail.trail_type}</p>
-//       <p>Skill level: ${trail.skill_level}</p>
-//       <br>
-//     `)
-//     // append trailHTML to content
-//     $('#content').append(trailHTML)
-//     $('#trails-index-message').text('Successfully Completed Task, scroll down for results')
-//     $('#trails-index-message').css('background-color', 'green')
-//     $('#trails-index-message').fadeOut(10000)
-//     // console.log('Successfully completed. Data is :', data)
-//   })
-// }
-
-// const onGetSuccess = function (data) {
-//           $('#content').html('')
-//       // console.table(data.trails)
-//       // loop through API response data
-//       // build HTML element with data
-//         const trailHTML = (`
-//           <h4>Trail Name: ${data.trail.trail_name}</h4>
-//           <p>Location: ${data.trail.location}</p>
-//           <p>Distance: ${data.trail.distance}</p>
-//           <p>Elevation gain: ${data.trail.elevation_gain}</p>
-//           <p>Trail type: ${data.trail.trail_type}</p>
-//           <p>Skill level: ${data.trail.skill_level}</p>
-//           <br>
-//         `)
-//         // append trailHTML to content
-//         $('#content').append(trailHTML)
-//         $('#trails-show-message').text('Successfully Completed Task, scroll down for results')
-//         $('#trails-show-message').css('background-color', 'green')
-//         $('#trails-show-message').fadeOut(10000)
-//         console.log('Successfully completed. Data is :', data)
-//     }
-//
-//   // reset form
-//   $('#trails-show').trigger("reset")
-
-
-// const onDestroySuccess = function (){
-//
-//   $('#content').html("Trail Successfully Deleted!")
-//   $('#trails-delete-message').text('Successfully Deleted Trail')
-//   $('#trails-delete-message').css('background-color', 'green')
-//   $('#trails-delete-message').fadeOut(10000)
-//   // console.log('Successfully run. Data is :', data)
-//
-//   // reset form
-//   $('#trails-delete').trigger("reset")
-// }
-
-// const onUpdateSuccess = function (data) {
-//   $('#content').html('')
-// console.table(data.trails)
-// loop through API response data
-// build HTML element with data
-// const trailHTML = (`
-//   <h4>Trail Name: ${data.trail.trail_name}</h4>
-//   <p>Location: ${data.trail.location}</p>
-//   <p>Distance: ${data.trail.distance}</p>
-//   <p>Elevation gain: ${data.trail.elevation_gain}</p>
-//   <p>Trail type: ${data.trail.trail_type}</p>
-//   <p>Skill level: ${data.trail.skill_level}</p>
-//   <br>
-// `)
-// // append trailHTML to content
-// $('#content').append(trailHTML)
-// $('#trails-update-message').text('Successfully Update Trail')
-// $('#trails-update-message').css('background-color', 'green')
-// $('#trails-update-message').fadeOut(10000)
-// // console.log('Successfully completed. Data is :', data)
-// }
-
-const onCreateMemorySuccess = function (data) {
-  console.log('create memory successfully ran, data is ', data)
-  $('#content-memory').html('You created a new memory!')
-  $('#memory-display-message').text('Successfully Created New Memory')
-  $('#memory-display-message').css('background-color', 'green')
-  $('#memory-display-message').fadeOut(10000)
-  // console.log('Successfully run. Data is :', data)
-  // reset form
-  $('#memory-create').trigger("reset")
-}
-
 const onIndexSuccess = function(data){
   // empty content element
-  $('#content-memory').html('')
-  console.table(data.memories)
+  $('#content').html('')
+  // console.table(data.memories)
   // loop through API response data
   data.memories.forEach(memory => {
     // build HTML element with data
     const memoryHTML = (`
-      <h3>Babies Given Name</h3>
-      <div><p>${data.memory.given_name}<p></div>
-      <h3>Babies Family Name</h3>
-      <div><p>${data.memory.family_name}<p></div>
-      <h3>Babies Birth Date</h3>
-      <div><p>${data.memory.birth_date}<p></div>
-      <h3>Babies Birth Weight</h3>
-      <div><p>${data.memory.birth_weight}<p></div>
-      <h3>Babies Birth Length</h3>
-      <div><p>${data.memory.birth_length}<p></div>
-      <h3>Babies Place of Birth</h3>
-      <div><p>${data.memory.hospital_name}<p></div>
-      <h3>Babies Delivery Doctor's Name/h3>
-      <div><p>${data.memory.doctor_name}<p></div>
-      <h3>Precious Memories of the Birth</h3>
-      <div><p>${data.memory.memory}<p></div>
+      <h4>Given Name: ${data.memory.given_name}</h4>
+      <h4>Family Name: ${data.memory.family_name}</h4>
+      <p>Birth Date: ${data.memory.birth_date}</p>
+      <p>Birth Weight: ${data.memory.birth_weight}</p>
+      <p>Birth Length: ${data.memory.birth_length}</p>
+      <p>Birth weight: ${data.memory.birth_weight}</p>
+      <p>Hospital Name: ${data.memory.hospital_name}</p>
+      <p>Doctor Name: ${data.memory.doctor_name}</p>
+      <p>Other Memory: ${data.memory.other_memory}</p>
       <br>
-      `)
+    `)
     // append memoryHTML to content
-    $('#content-memory').append(memoryHTML)
-    $('#memory-display-message').text('Successfully Completed Task, scroll down for results')
-    $('#memory-display-message').css('background-color', 'green')
-    $('#memory-display-message').fadeOut(10000)
-    console.log('Successfully completed. Data is :', data)
+    $('#content').append(memoryHTML)
+    $('#memories-index-message').text('Successfully Completed Task, scroll down for results')
+    $('#memories-index-message').css('background-color', 'green')
+    $('#memories-index-message').fadeOut(10000)
+    // console.log('Successfully completed. Data is :', data)
   })
 }
 
 const onGetSuccess = function (data) {
-          $('#content-memory').html('')
+          $('#content').html('')
       // console.table(data.memories)
       // loop through API response data
       // build HTML element with data
         const memoryHTML = (`
-          <h3>Babies Given Name</h3>
-          <div><p>${data.memory.given_name}<p></div>
-          <h3>Babies Family Name</h3>
-          <div><p>${data.memory.family_name}<p></div>
-          <h3>Babies Birth Date</h3>
-          <div><p>${data.memory.birth_date}<p></div>
-          <h3>Babies Birth Weight</h3>
-          <div><p>${data.memory.birth_weight}<p></div>
-          <h3>Babies Birth Length</h3>
-          <div><p>${data.memory.birth_length}<p></div>
-          <h3>Babies Place of Birth</h3>
-          <div><p>${data.memory.hospital_name}<p></div>
-          <h3>Babies Delivery Doctor's Name/h3>
-          <div><p>${data.memory.doctor_name}<p></div>
-          <h3>Precious Memories of the Birth</h3>
-          <div><p>${data.memory.memory}<p></div>
+          <h4>Given Name: ${data.memory.given_name}</h4>
+          <h4>Family Name: ${data.memory.family_name}</h4>
+          <p>Birth Date: ${data.memory.birth_date}</p>
+          <p>Birth Weight: ${data.memory.birth_weight}</p>
+          <p>Birth Length: ${data.memory.birth_length}</p>
+          <p>Birth weight: ${data.memory.birth_weight}</p>
+          <p>Hospital Name: ${data.memory.hospital_name}</p>
+          <p>Doctor Name: ${data.memory.doctor_name}</p>
+          <p>Other Memory: ${data.memory.other_memory}</p>
           <br>
         `)
-        // append memoryHTML to content
-        $('#content-memory').append(memoryHTML)
-        $('#memory-display-message').text('Successfully Completed Task, scroll down for results')
-        $('#memory-display-message').css('background-color', 'green')
-        $('#memory-display-message').fadeOut(10000)
+        // append trailHTML to content
+        $('#content').append(memoryHTML)
+        $('#memories-show-message').text('Successfully Completed Task, scroll down for results')
+        $('#memories-show-message').css('background-color', 'green')
+        $('#memories-show-message').fadeOut(10000)
         console.log('Successfully completed. Data is :', data)
     }
 
   // reset form
-  $('#birthday').trigger("reset")
+  $('#memories-show').trigger("reset")
 
-// const onCreateFirstsSuccess = function (data) {
-//   $('#content-firsts').html('')
-//       // console.table(data.firsts)
-//       // loop through API response data
-//       // build HTML element with data
-//         const firstsHTML = (`
-//           <h3>Babies First Smile</h3>
-//           <div><p>${data.firsts.smile}<p></div>
-//           <h3>Babies First Laugh</h3>
-//           <div><p>${data.firsts.laugh}<p></div>
-//           <h3>Babies First Time Rolling Over</h3>
-//           <div><p>${data.firsts.roll_over}<p></div>
-//           <h3>Babies First Time Sitting Up</h3>
-//           <div><p>${data.firsts.sitting_up}<p></div>
-//           <h3>Babies First Tooth</h3>
-//           <div><p>${data.firsts.tooth}<p></div>
-//           <h3>Babies First Kisses</h3>
-//           <div><p>${data.firsts.kisses}<p></div>
-//           <h3>Babies First Time Crawling/h3>
-//           <div><p>${data.firsts.crawling}<p></div>
-//           <h3>Babies First Foods</h3>
-//           <div><p>${data.firsts.foods}<p></div>
-//           <h3>Babies First Time Standing</h3>
-//           <div><p>${data.firsts.standing}<p></div>
-//           <h3>Babies First Time Waving Bye-Bye</h3>
-//           <div><p>${data.firsts.waving}<p></div>
-//           <h3>Babies First Steps</h3>
-//           <div><p>${data.firsts.walking}<p></div>
-//           <h3>Babies First Words</h3>
-//           <div><p>${data.firsts.words}<p></div>
-//           <h3>Babies First Time Saying Mama and Dada</h3>
-//           <div><p>${data.firsts.mama_dada}<p></div>
-//           <h3>Babies First Haircut</h3>
-//           <div><p>${data.firsts.haircut}<p></div>
-//           <h3>Babies First Birthday</h3>
-//           <div><p>${data.firsts.birthday}<p></div>
-//           <h3>Other Precious First Memories</h3>
-//           <div><p>${data.firsts.other}<p></div>
-//           <br>
-//         `)
-//         // append familyHTML to content
-//         $('#content-firsts').append(firstsHTML)
-//   $('#firsts-display-message').html('You created a new memory!')
-//   $('#firsts-display-message').text('Successfully Created New Memory')
-//   $('#firsts-display-message').css('background-color', 'green')
-//   $('#firsts-display-message').fadeOut(10000)
-//   // console.log('Successfully run. Data is :', data)
-//   // reset form
-//   $('#firsts-create').trigger("reset")
-// }
-//
-// const onCreateFavoritesSuccess = function (data) {
-//   console.log('Favorites data is ' (data))
-//   $('#content-favorites').html('')
-//       // console.table(data.favorites)
-//       // loop through API response data
-//       // build HTML element with data
-//         const favoritesHTML = (`
-//           <h3>Babies Favorite Foods</h3>
-//           <div><p>${data.favorites.foods}<p></div>
-//           <h3>Babies Favorite Songs/Lullabyes</h3>
-//           <div><p>${data.favorites.songs}<p></div>
-//           <h3>Babies Favorite Toys</h3>
-//           <div><p>${data.favorites.toys}<p></div>
-//           <h3>Other Babies Favorites</h3>
-//           <div><p>${data.favorites.other}<p></div>
-//           <br>
-//         `)
-//         // append familyHTML to content
-//         $('#content-favorites').append(favoritesHTML)
-//   $('#favorites-display-message').html('You created a new memory!')
-//   $('#favorites-display-message').text('Successfully Created New Memory')
-//   $('#favorites-display-message').css('background-color', 'green')
-//   $('#favorites-display-message').fadeOut(10000)
-//   // console.log('Successfully run. Data is :', data)
-//   // reset form
-//   $('#favorites-create').trigger("reset")
-// }
+
+const onDestroySuccess = function (){
+
+  $('#content').html("Memory Successfully Deleted!")
+  $('#memories-delete-message').text('Successfully Deleted Memory')
+  $('#memories-delete-message').css('background-color', 'green')
+  $('#memories-delete-message').fadeOut(10000)
+  // console.log('Successfully run. Data is :', data)
+
+  // reset form
+  $('#memories-delete').trigger("reset")
+}
+
+const onUpdateSuccess = function (data) {
+  $('#content').html('')
+// console.table(data.memories)
+// loop through API response data
+// build HTML element with data
+const memoryHTML = (`
+  <h4>Given Name: ${data.memory.given_name}</h4>
+  <h4>Family Name: ${data.memory.family_name}</h4>
+  <p>Birth Date: ${data.memory.birth_date}</p>
+  <p>Birth Weight: ${data.memory.birth_weight}</p>
+  <p>Birth Length: ${data.memory.birth_length}</p>
+  <p>Birth weight: ${data.memory.birth_weight}</p>
+  <p>Hospital Name: ${data.memory.hospital_name}</p>
+  <p>Doctor Name: ${data.memory.doctor_name}</p>
+  <p>Other Memory: ${data.memory.other_memory}</p>
+  <br>
+`)
+// append memoryHTML to content
+$('#content').append(memoryHTML)
+$('#memories-update-message').text('Successfully Update Memory')
+$('#memories-update-message').css('background-color', 'green')
+$('#memories-update-message').fadeOut(10000)
+// console.log('Successfully completed. Data is :', data)
+}
+
+const onCreateSuccess = function (data) {
+  $('#content').html('You created a new memory!')
+  $('#memories-create-message').text('Successfully Created New Memory')
+  $('#memories-create-message').css('background-color', 'green')
+  $('#memories-create-message').fadeOut(10000)
+  // console.log('Successfully run. Data is :', data)
+  // reset form
+  $('#memories-create').trigger("reset")
+}
 
 const onFailure = function(data){
   // log the error
   // console.error(data)
 
   // display error to user
-  $('#memory-display-message').html('Something went wrong, please try again.')
-  $('#memory-display-message').text('Error on submit')
-  $('#memory-display-message').css('background-color', 'red')
-  console.error('Failure when command ran. Error is :', error)
+  $('#content').html('Something went wrong, please try again.')
+  $('#messages').text('Error on submit')
+  $('#messages').css('background-color', 'red')
+  // console.error('Failure when command ran. Error is :', error)
 }
 
 module.exports = {
-  // onIndexSuccess,
-  // onGetSuccess,
-  // onDestroySuccess,
-  // onUpdateSuccess,
-  onCreateMemorySuccess,
   onIndexSuccess,
   onGetSuccess,
-  // onCreateFirstsSuccess,
-  // onCreateFavoritesSuccess,
+  onDestroySuccess,
+  onUpdateSuccess,
+  onCreateSuccess,
   onFailure
 }

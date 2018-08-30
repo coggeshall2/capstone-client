@@ -17,26 +17,18 @@
        <header >
          <div>
            <h1>Remember Me</h1>
-           <h3>A digital scrap book of all your fondest moments in your babies first years</h3>
-         <div id="messages"></div>
+           <h4>First time users, please sign up and then sign in</h4>
+           <div id="messages"></div>
          </div>
-         <div id="register" class='buttons'>
-          <h4>First time users, please register and then sign in</h4><br><br>
-         <button class ='button'>Register/Login</button>
-         </div>
-        <div id="wrapper-register">
-
          <div id="signUp">
            <form id="sign-up">
              <fieldset>
-               <h2>Register!</h2>
+               <h2>Sign Up!</h2>
                <div id='sign-up-message'></div>
-               <div>
                <input type="email" name="credentials[email]" placeholder="Email"><br>
                <input type="password" name="credentials[password]" placeholder="Password"><br>
-               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br><br>
-              </div>
-               <input type="submit" value="Register!">
+               <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password"><br>
+               <input type="submit" value="Sign Up!">
              </fieldset>
             </form>
           </div>
@@ -44,134 +36,80 @@
           <form id="sign-in">
             <fieldset>
               <h2>Sign In!</h2>
-              <div id="messages"></div>
-              <div>
+              <div id="sign-in-message"></div>
                 <input type="text" name="credentials[email]" placeholder="Email"><br>
-                <input type="password" name="credentials[password]" placeholder="Password"><br><br>
-              </div>
+                <input type="password" name="credentials[password]" placeholder="Password"><br>
                 <input type="submit" value="Sign In!">
             </fieldset>
            </form>
            </div>
-         </div>
-       </header>
-         <br><br>
-         <div class='userButtons'>
-           <div class='buttons'>
-           <button class = 'button' id='memoryInfo'>Create Memories</button>
-           <button class = 'button' id='seeInfo'>User Info</button>
+           <div></div>
+           <div></div>
+           <div class='userButtons'>
+             <div class='buttons'>
+             <!-- <button type="button" class="button" id="trailInfo"><a href="#trail-info"></a>Trails Info</button>
+             <button type="button" class="button" id="seeInfo"><a href=".userInfo"></a>See User Info</button> -->
+             <button class = 'button' id='memoriesInfo'>Memories Info</button>
+             <button class = 'button' id='seeInfo'>See User Info</button>
+             </div>
            </div>
-         </div>
-
 <!-- Hidden Divs -->
-<div id="wrapper-birth">
-  <div id="birth-info">
-    <form id="memory-create" class="border">
-      <fieldset>
-
-        <h2>You've been blessed with a child</h2>
-      <div>
-        <h3>Babies given name</h3>
-        <input type="text" name="memory[given_name]" placeholder="Enter given name"><br>
-      </div>
-      <div>
-        <h3>Babies family name</h3>
-        <input type="text" name="memory[family_name]" placeholder="Enter family name"><br>
-      </div>
-      <div>
-        <h3>Babies birth date</h3>
-        <input type="date" name="memory[birth_date]" placeholder="Enter birth date"><br>
-      </div>
-      <div>
-        <h3>Babies weight at birth</h3>
-        <input type="number" name="memory[birth_weight]" placeholder="Enter birth weight in lbs./oz."><br>
-      </div>
-      <div>
-        <h3>Babies length at birth</h3>
-        <input type="number" name="memory[birth_length]" placeholder="Enter birth length in inches"><br>
-      </div>
-      <div>
-        <h3>Babies place of birth</h3>
-        <input type="text" name="memory[hospital_name]" placeholder="Enter hospital name"><br>
-      </div>
-      <div>
-        <h3>Babies delivery doctor</h3>
-        <input type="text" name="memory[doctor_name]" placeholder="Enter doctor's name"><br>
-      </div>
-      <div>
-        <h3>Precious memories of the birth</h3>
-        <textarea name="memory[memory]" form="birthday" placeholder="Enter other memorable info here..."></textarea><br><br>
-      </div>
-      <input id="memory-submit" type="submit" value="Create Memory">
-      <div id="memory-create-message"></div>
-      </fieldset>
-    </form>
-  </div>
-</div>
-<br><br>
-
-
-
-<div id="wrapper-display-memories">
-
-    <h3>Say hello to your bundle of joy</h3>
-    <div id="content-memory">
-      <div id="memory-display-message"></div>
-  </div>
-</div>
-           <!-- <div id="basic-info">
-             <form id="family-create" class="border">
+           <div id="memories-info">
+             <form id="memory-create" class="border">
                <fieldset>
-                 <div id="family-create-message"></div>
-                    <legend>Add Family Info</legend>
-                    <input type="text" name="family[family_name]" placeholder="Enter Family Name">
-                    <input type="text" name="family[child_name]" placeholder="Enter Child's Name">
-                    <input type="text" name="trail[distance]" placeholder="Enter Trail Distance">
-                    <input type="text" name="trail[elevation_gain]" placeholder="Enter Trail Elevation Gain">
-                    <input type="text" name="trail[trail_type]" placeholder="Enter Trail Type">
-                    <input type="text" name="trail[skill_level]" placeholder="Enter Trail Skill Level">
-                    <input type="submit" value="Create Trail">
-                  </fieldset>
-                </form> -->
-                <!-- <form id="trails-index" class="border">
-                  <fieldset>
-                    <div id="trails-index-message"></div>
-                    <legend>Get All Trails</legend>
-                    <input type="submit" value="Get All Trails">
+                 <div id="memory-create-message"></div>
+                    <legend>Create A Memory</legend>
+                    <input type="text" name="memory[given_name]" placeholder="Enter Babies Given Name">
+                    <input type="text" name="memory[family_name]" placeholder="Enter Babies Family Name">
+                    <input type="text" name="memory[birth_date]" placeholder="Enter Babies Birth Date">
+                    <input type="text" name="memory[birth_weight]" placeholder="Enter Babies Birth Weight">
+                    <input type="text" name="memory[birth_length]" placeholder="Enter Babies Birth Length">
+                    <input type="text" name="memory[hospital_name]" placeholder="Enter Name of Hospital">
+                    <input type="text" name="memory[doctor_name]" placeholder="Enter Name of Doctor">
+                    <input type="text" name="memory[other_memory]" placeholder="Enter Other Memories">
+                    <input type="submit" value="Create Memory">
                   </fieldset>
                 </form>
-                <form id="trails-show" class="border">
+                <form id="memories-index" class="border">
                   <fieldset>
-                    <div id="trails-show-message"></div>
-                    <legend>Get One Trail</legend>
-                      <input type="text" name="trail[id]" placeholder="Enter Trail ID">
-                      <input type="submit" value="Get Trail">
+                    <div id="memories-index-message"></div>
+                    <legend>Get All Memories</legend>
+                    <input type="submit" value="Get All Memories">
                   </fieldset>
                 </form>
-                <form id="trails-delete" class="border">
+                <form id="memories-show" class="border">
                   <fieldset>
-                    <div id="trails-delete-message"></div>
-                    <legend>Delete One Trail</legend>
-                    <input type="text" name="trail[id]" placeholder="Enter Trail ID">
-                    <input type="submit" value="Delete Trail">
+                    <div id="memories-show-message"></div>
+                    <legend>Get One Memory</legend>
+                      <input type="text" name="memory[id]" placeholder="Enter Memory ID">
+                      <input type="submit" value="Get Memory">
                   </fieldset>
                 </form>
-                <form id="trails-update" class="border">
+                <form id="memories-delete" class="border">
                   <fieldset>
-                    <div id="trails-update-message"></div>
-                    <legend>Update One Trail</legend>
-                    <input type="text" name="trail[trail_id]" placeholder="Enter Trail ID">
-                    <input type="text" name="trail[trail_name]" placeholder="Enter Trail Name">
-                    <input type="text" name="trail[location]" placeholder="Enter Trail Location">
-                    <input type="text" name="trail[distance]" placeholder="Enter Trail Distance">
-                    <input type="text" name="trail[elevation_gain]" placeholder="Enter Trail Elevation Gain">
-                    <input type="text" name="trail[trail_type]" placeholder="Enter Trail Type">
-                    <input type="text" name="trail[skill_level]" placeholder="Enter Trail Skill Level">
-                    <input type="submit" value="Update Trail">
+                    <div id="memories-delete-message"></div>
+                    <legend>Delete One Memory</legend>
+                    <input type="text" name="memory[id]" placeholder="Enter Memory ID">
+                    <input type="submit" value="Delete Memory">
+                  </fieldset>
+                </form>
+                <form id="memories-update" class="border">
+                  <fieldset>
+                    <div id="memories-update-message"></div>
+                    <legend>Update One Memory</legend>
+                    <input type="text" name="memory[given_name]" placeholder="Enter Babies Given Name">
+                    <input type="text" name="memory[family_name]" placeholder="Enter Babies Family Name">
+                    <input type="text" name="memory[birth_date]" placeholder="Enter Babies Birth Date">
+                    <input type="text" name="memory[birth_weight]" placeholder="Enter Babies Birth Weight">
+                    <input type="text" name="memory[birth_length]" placeholder="Enter Babies Birth Length">
+                    <input type="text" name="memory[hospital_name]" placeholder="Enter Name of Hospital">
+                    <input type="text" name="memory[doctor_name]" placeholder="Enter Name of Doctor">
+                    <input type="text" name="memory[other_memory]" placeholder="Enter Other Memories">
+                    <input type="submit" value="Update Memory">
                   </fieldset>
                 </form>
                 <div id="content"></div>
-              </div> -->
+              </div>
         <!-- End Hidden Divs -->
         <!-- User Info -->
               <div class='userInfo'>
