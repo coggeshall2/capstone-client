@@ -38,7 +38,7 @@ I used HTML5 to build the basic structure of the app and CSS3 to style.
 Javascript is used to build the form fields, send AJAX calls and jQuery is used to interact with the DOM and update the view
 
 ## Wireframe
-![Remember Me](https://github.com/coggeshall2/capstone-client/capstone-wireframe.jpg)
+![Remember Me](https://github.com/coggeshall2/capstone-front-end/capstone-wireframe.jpg)
 
 
 
