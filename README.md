@@ -1,19 +1,19 @@
-# WDI-03 Providence Project \#2 - Serenity Trails Logger
+# WDI-03 Providence Project \#4 - Remember Me
 
 ## Overview
 
-For my second project at General Assembly I was tasked with creating a full stack Single
+For my final project at General Assembly I was tasked with creating a full stack Single
 Page Application for the web that would allow a user to login with authentication
 credentials and handle all CRUD actions on a Rails API that I created with generated scaffold
 commands.  My user stories for this project were:
 
 - A user needs to create a new account
 - A user needs to login
-- A user needs view all their trails
-- A user needs to search for a trail
-- A user needs to update a trail
-- A user needs to create a new trail
-- A user needs to delete a trail
+- A user needs view all their memories
+- A user needs to search for a memory
+- A user needs to update a memory
+- A user needs to create a new memory
+- A user needs to delete a memory
 - A user needs to change their password
 - A user needs to logout
 
@@ -38,14 +38,12 @@ I used HTML5 to build the basic structure of the app and CSS3 to style.
 Javascript is used to build the form fields, send AJAX calls and jQuery is used to interact with the DOM and update the view
 
 ## Wireframe
-![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_1.jpg)
+![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/capstone-client/capstone-wireframe.jpg)
 
-![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_2.jpg)
 
-![Serenity Trails Logger Wireframe](https://github.com/coggeshall2/full-stack-project-front-end/blob/master/Wireframe_3.jpg)
 
 ## Updates
-I am working on creating a better UI that is styled with imagery and eventually connecting to a 3rd party API allowing for a search of all trails within their database.
+I am working on creating a better UI that is styled with imagery.
 
 Link to the backend of my project:
-https://github.com/coggeshall2/full_stack_project_rails_api
+https://github.com/coggeshall2/capstone-memory-backend
